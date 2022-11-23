@@ -9,10 +9,10 @@ const Layout = () => {
         <TopNavbar />
       </div>
       <div>
-        <Outlet />
+        {/* <Outlet /> */}
       </div>
       <div>
-        <FooterNavbar />
+        {/* <FooterNavbar /> */}
       </div>
     </div>
   );

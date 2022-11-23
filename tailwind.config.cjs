@@ -6,6 +6,9 @@ module.exports = {
       backgroundColor: {
         purple: "#4A46FF",
       },
+      borderColor: {
+        purple: "#4A46FF",
+      },
     },
   },
   plugins: [],

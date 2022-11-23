@@ -1,7 +1,11 @@
-import { Home } from "../../components/dashbaord/home/Home";
+import { QrGenerator } from "../../components/home/QrGenerator";
 
 const HomePage = () => {
-  return <Home />;
+  return (
+    <>
+      <QrGenerator />
+    </>
+  );
 };
 
 export { HomePage };
