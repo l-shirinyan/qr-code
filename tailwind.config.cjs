@@ -5,9 +5,18 @@ module.exports = {
     extend: {
       backgroundColor: {
         purple: "#4A46FF",
+        "light-grey": "#F8F8F8",
+        yellow: "#F3B755",
+        "light-yellow": "#FDBC3E",
+        "grey-100": "#EEEEEE",
       },
       borderColor: {
         purple: "#4A46FF",
+        "light-grey": "#DEDEDE",
+      },
+      textColor: {
+        red: "#FF1717",
+        grey: "#AAAAAA",
       },
     },
   },

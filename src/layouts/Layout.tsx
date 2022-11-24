@@ -8,11 +8,11 @@ const Layout = () => {
       <div>
         <TopNavbar />
       </div>
-      <div>
-        {/* <Outlet /> */}
+      <div className="max-w-[1277px] mx-auto pt-[105px]">
+        <Outlet />
       </div>
       <div>
-        {/* <FooterNavbar /> */}
+        <FooterNavbar />
       </div>
     </div>
   );
