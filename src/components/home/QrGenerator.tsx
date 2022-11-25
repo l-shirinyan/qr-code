@@ -13,7 +13,7 @@ const QrGenerator = () => {
     <div className="flex flex-col gap-[22px]">
       <form
         onSubmit={handleGenerateQR}
-        className="flex flex-col justify-between w-[90%] h-[598px] bg-light-grey rounded-[10px] mx-auto pt-[49px] px-11 pl-11 pb-[51px] mt-[83px] lg:pr-0"
+        className="flex flex-col justify-between w-[90%] h-[598px] bg-light-grey rounded-[10px] mx-auto pt-[49px] px-11 pl-11 pb-[51px] md:mt-[83px] lg:pr-0"
       >
         <span className="text-center text-[24px] font-medium leading-[26px] lg:text-start">
           The most advanced QR Code Generator with logo online

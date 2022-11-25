@@ -14,7 +14,7 @@ const TopNavbar = () => {
     >
       {({ open }) => (
         <>
-          <div className="w-full max-w-[1280px] pl-5 pt-[49px] pr-5 lg:pl-14 xl:pl-[88px] xl:px-6 2xl:pl-0">
+          <div className="w-full max-w-[1280px] pl-5 pr-5 pt-5 md:pt-[49px] lg:pl-14 xl:pl-[88px] xl:px-6 2xl:pl-0">
             <div className="flex h-16 justify-between">
               <div className="flex w-[87%] xl:w-[79%] justify-between">
                 <div className="flex flex-shrink-0 items-center">

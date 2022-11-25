@@ -8,7 +8,7 @@ const QrCodeCases = () => {
       </h3>
       <ul
         role="list"
-        className="w-[90%] h-full mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+        className="w-[90%] h-full mx-auto grid grid-cols-2 gap-x-[29px] gap-y-[38px] sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
       >
         {files.map((file) => (
           <li key={file.source} className="relative">
@@ -16,7 +16,7 @@ const QrCodeCases = () => {
               <img
                 src={file.source}
                 alt=""
-                className="pointer-events-none object-cover group-hover:opacity-75"
+                className="pointer-events-none object-cover group-hover:opacity-75 max-w-[298px] max-h-[199px]"
               />
             </div>
             <p className="text-lg leading-7 text-center mt-4">{file.title}</p>
