@@ -10,9 +10,12 @@ const QrFrequently = () => {
         Frequently Asked Questions
       </h3>
       <div className="flex flex-col gap-[38px] px-6 lg:pr-[41px] lg:pl-[52px] xl:px-0">
-        {faqs.map((faq, idx) => (
-          <div className="grid gap-x-[38px] gap-y-[30px] items-center md:grid-cols-2">
-            {faq.map((elem) => {
+        {faqs.map((faq, id) => (
+          <div
+            key={id}
+            className="grid gap-x-[38px] gap-y-[30px] items-center md:grid-cols-2"
+          >
+            {faq.map((elem, idx) => {
               return (
                 <Disclosure as="div" key={idx}>
                   {({ open }) => (
