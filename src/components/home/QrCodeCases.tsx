@@ -12,7 +12,7 @@ const QrCodeCases = () => {
       >
         {files.map((file) => (
           <li key={file.source} className="relative">
-            <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+            <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg">
               <img
                 src={file.source}
                 alt=""

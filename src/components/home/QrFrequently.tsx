@@ -9,11 +9,11 @@ const QrFrequently = () => {
       <h3 className="text-[30px] font-bold leading-[45px] text-center mb-[41px] mx-auto">
         Frequently Asked Questions
       </h3>
-      <div className="flex flex-col gap-[38px] px-6 lg:pr-[41px] lg:pl-[52px] xl:px-0">
+      <div className="flex flex-col gap-[38px] px-6 items-start lg:pr-[41px] lg:flex-row lg:pl-[52px] xl:px-0">
         {faqs.map((faq, id) => (
           <div
             key={id}
-            className="grid gap-x-[38px] gap-y-[30px] items-center md:grid-cols-2"
+            className="grid gap-x-[38px] gap-y-[30px]"
           >
             {faq.map((elem, idx) => {
               return (
@@ -33,16 +33,16 @@ const QrFrequently = () => {
                           >
                             {elem.question}
                           </span>
-                          <span className="ml-6 flex h-7 items-center">
-                            {open ? <MinusIcon /> : <PlusIcon />}
+                          <span className="ml-5 flex h-7 items-center">
+                            {open ? <MinusIcon className="w-5"/> : <PlusIcon className="w-5"/>}
                           </span>
                         </Disclosure.Button>
                       </dt>
                       <Disclosure.Panel
                         as="dd"
-                        className="pt-4 pr-12 bg-white max-w-[571px]"
+                        className="pt-4 bg-white max-w-[571px]"
                       >
-                        <p className="text-base leading-6 text-grey-500 pl-7 text-justify">
+                        <p className="text-base leading-6 text-grey-500 pl-7 text-justify max-w-[500px]">
                           {elem.answer}
                         </p>
                       </Disclosure.Panel>
