@@ -7,8 +7,9 @@ import { useLocalStorage } from "../../helpers/hooks/useLocalStorage";
 
 const storageName = "qrCodeData";
 
-const {target_url} = JSON.parse(localStorage.getItem(storageName) || "");
-
+const { target_url } = localStorage.getItem(storageName)
+  ? JSON.parse(localStorage.getItem(storageName) || "")
+  : "";
 
 const QrGenerator = () => {
   const [qrValue, setQrValue] = useState<string>(target_url);
