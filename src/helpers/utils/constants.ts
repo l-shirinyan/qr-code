@@ -1,20 +1,20 @@
 import { FunctionComponent, SVGProps } from "react";
-import { ReactComponent as EmailIcon } from "../assets/icons/email.svg";
-import { ReactComponent as LocationIcon } from "../assets/icons/location.svg";
-import { ReactComponent as TelIcon } from "../assets/icons/tel.svg";
-import { ReactComponent as FacebookIcon } from "../assets/icons/facebook.svg";
-import { ReactComponent as LinkedInIcon } from "../assets/icons/linkedIn.svg";
-import { ReactComponent as TwitterIcon } from "../assets/icons/twitter.svg";
-import Servers from "../assets/images/servers.png";
-import Scalable from "../assets/images/scalability.png";
-import Fast from "../assets/images/fast-time.png";
-import Flexable from "../assets/images/sugar-cube.png";
-import Safe from "../assets/images/shield.png";
-import Compliant from "../assets/images/gdpr.png";
-import AddImage from "../assets/images/add-image.png";
-import BarChart from "../assets/images/bar-chart.png";
-import QrCode from "../assets/images/qr-code.png";
-import Hourglass from "../assets/images/hourglass.png";
+import { ReactComponent as EmailIcon } from "../../assets/icons/email.svg";
+import { ReactComponent as LocationIcon } from "../../assets/icons/location.svg";
+import { ReactComponent as TelIcon } from "../../assets/icons/tel.svg";
+import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook.svg";
+import { ReactComponent as LinkedInIcon } from "../../assets/icons/linkedIn.svg";
+import { ReactComponent as TwitterIcon } from "../../assets/icons/twitter.svg";
+import Servers from "../../assets/images/servers.png";
+import Scalable from "../../assets/images/scalability.png";
+import Fast from "../../assets/images/fast-time.png";
+import Flexable from "../../assets/images/sugar-cube.png";
+import Safe from "../../assets/images/shield.png";
+import Compliant from "../../assets/images/gdpr.png";
+import AddImage from "../../assets/images/add-image.png";
+import BarChart from "../../assets/images/bar-chart.png";
+import QrCode from "../../assets/images/qr-code.png";
+import Hourglass from "../../assets/images/hourglass.png";
 interface ILinks {
   title: string;
   path: string;
@@ -29,6 +29,7 @@ interface IContact {
 export interface IMenuItems {
   name: string;
   description: string;
+  href: string;
 }
 
 interface ISolutions {
@@ -257,17 +258,7 @@ export const faqs = [
         "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
     },
     {
-      question: "How many free static QR codes can I make?",
-      answer:
-        "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
-    },
-    {
       question: "What is the difference between a PNG and SVG file?",
-      answer:
-        "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
-    },
-    {
-      question: "What is the best format for the logo of the QR code?",
       answer:
         "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
     },
@@ -277,24 +268,34 @@ export const faqs = [
         "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
     },
     {
-      question: "Can I make a QR code for a MP3?",
+      question: "Can I save QR codes as a template and can delete it?",
+      answer:
+        "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
+    },
+    {
+      question: "How do I make a QR code in bulk?",
       answer:
         "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
     },
   ],
   [
     {
-      question: "Can I save QR codes as a template and can delete it?",
+      question: "How many free static QR codes can I make?",
+      answer:
+        "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
+    },
+    {
+      question: "What is the best format for the logo of the QR code?",
+      answer:
+        "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
+    },
+    {
+      question: "Can I make a QR code for a MP3?",
       answer:
         "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
     },
     {
       question: "Can a Wi-Fi QR code be dynamic?",
-      answer:
-        "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
-    },
-    {
-      question: "How do I make a QR code in bulk?",
       answer:
         "A SVG file is a vector type file that can be used in programs as Illustrator or InDesign. For Photoshop you need to import your SVG file. A SVG file is great for printing at the highest quality. A PNG is a format to use online but can also be printed although a PNG has less quality than a SVG.",
     },

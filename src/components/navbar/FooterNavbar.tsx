@@ -5,7 +5,7 @@ import {
   footerContactUs,
   footerProduct,
   socialMediaIcons,
-} from "../../utils/constants";
+} from "../../helpers/utils/constants";
 
 const FooterNavbar = () => {
   return (

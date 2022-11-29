@@ -3,7 +3,7 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../assets/images/Logo.png";
 import { CustomDropDown } from "./CustomDropDown";
-import { menuItems, staticNavbarLinks } from "../../utils/constants";
+import { menuItems, staticNavbarLinks } from "../../helpers/utils/constants";
 import { Link } from "react-router-dom";
 
 const TopNavbar = () => {
@@ -85,7 +85,7 @@ const TopNavbar = () => {
                       className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
                     >
                       <CustomDropDown
-                        y={idx}
+                        key={idx}
                         title={elem.title}
                         menuItems={menuItems}
                         mobile={true}

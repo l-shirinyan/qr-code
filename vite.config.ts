@@ -4,7 +4,10 @@ import svgr from 'vite-plugin-svgr'
 /// <reference types="vite-plugin-svgr/client" />
 
 export default defineConfig({
-  plugins: [ svgr({
-    
-  }),react()]
+  plugins: [ svgr({}),react()],
+  define: {
+    'process.env': {
+      REACT_APP_BASE_URL: "https://qrcode-api.gaytomycode.com/v1"
+    }
+  }
 })
