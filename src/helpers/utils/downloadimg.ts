@@ -1,4 +1,4 @@
-import { IGeneratedQr } from "../components/home/model";
+import { IGeneratedQr } from "../../components/home/model";
 
 const qrCodeUrl = (url: string) => {
   return fetch(url)

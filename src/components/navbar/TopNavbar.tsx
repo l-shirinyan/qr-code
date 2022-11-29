@@ -3,7 +3,7 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../assets/images/Logo.png";
 import { CustomDropDown } from "./CustomDropDown";
-import { menuItems, staticNavbarLinks } from "../../utils/constants";
+import { menuItems, staticNavbarLinks } from "../../helpers/utils/constants";
 import { Link } from "react-router-dom";
 
 const TopNavbar = () => {

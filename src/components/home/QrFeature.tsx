@@ -1,4 +1,4 @@
-import { solutions } from "../../utils/constants";
+import { solutions } from "../../helpers/utils/constants";
 
 const QrFeature = () => {
   return (

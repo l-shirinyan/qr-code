@@ -2,7 +2,7 @@ import { Transition, Popover } from "@headlessui/react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowDownIcon } from "../../assets/icons/arrow-down.svg";
-import { IMenuItems } from "../../utils/constants";
+import { IMenuItems } from "../../helpers/utils/constants";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");

@@ -1,4 +1,4 @@
-import { posts } from "../../utils/constants";
+import { posts } from "../../helpers/utils/constants";
 
 const QrCustomize = () => {
   return (

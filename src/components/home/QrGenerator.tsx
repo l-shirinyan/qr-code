@@ -1,23 +1,26 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-import { useMutation } from "@tanstack/react-query";
 import { fetchPost } from "../../redux/queries";
 import { IGeneratedQr } from "./model";
-import { DownloadImg } from "../../utils/downloadimg";
+import { DownloadImg } from "../../helpers/utils/downloadimg";
+import { useLocalStorage } from "../../helpers/hooks/useLocalStorage";
+
+const storageName = "qrCodeData";
+
+const {target_url} = JSON.parse(localStorage.getItem(storageName) || "");
+
 
 const QrGenerator = () => {
-  const [qrValue, setQrValue] = useState<string>("");
+  const [qrValue, setQrValue] = useState<string>(target_url);
   const [err, setErr] = useState<string>("");
-  const [generatedQr, setGeneratedQr] = useState<IGeneratedQr>();
-  const mutation = useMutation({
-    mutationFn: fetchPost,
+
+  const { data: generatedQr, mutate } = useLocalStorage({
+    storageName,
+    apiRequest: fetchPost,
     onError: (err: { response: { status: number } }) => {
       if (err.response.status === 422) {
         setErr("Url must be a valid url");
       }
-    },
-    onSuccess: (data) => {
-      setGeneratedQr(data);
     },
   });
 
@@ -27,7 +30,7 @@ const QrGenerator = () => {
 
   const handleGenerateQR = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    mutation.mutate(qrValue);
+    mutate.mutate(qrValue);
   };
 
   return (

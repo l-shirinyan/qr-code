@@ -1,7 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus.svg";
 import { ReactComponent as MinusIcon } from "../../assets/icons/minus.svg";
-import { faqs } from "../../utils/constants";
+import { faqs } from "../../helpers/utils/constants";
 
 const QrFrequently = () => {
   return (
