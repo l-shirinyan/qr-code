@@ -1,4 +1,4 @@
-import { Transition, Popover } from "@headlessui/react";
+import { Transition, Popover, Menu } from "@headlessui/react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowDownIcon } from "../../assets/icons/arrow-down.svg";
@@ -27,14 +27,14 @@ const CustomDropDown: React.FC<ICustomDropDownProps> = ({
             <Popover.Button
               className={classNames(
                 open ? "text-gray-900" : "text-gray-500",
-                "group inline-flex items-center rounded-md bg-white text-base font-medium"
+                "inline-flex items-center text-base font-medium focus:outline-none"
               )}
             >
               <span
                 className={`${
                   mobile
                     ? ""
-                    : "inline-flex items-center hover:border-b-2 hover:border-grey px-1 text-black text-lg font-normal leading-[27px]"
+                    : "inline-flex items-center px-1 hover:border-light-grey border-b-transparent border-b-2 text-black text-lg font-normal leading-[27px]"
                 }`}
               >
                 {title}
@@ -57,7 +57,7 @@ const CustomDropDown: React.FC<ICustomDropDownProps> = ({
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
-                <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black">
+                <div className="overflow-hidden rounded-lg shadow-lg">
                   <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                     {menuItems.map((item) => (
                       <Link

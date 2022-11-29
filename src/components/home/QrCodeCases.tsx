@@ -11,12 +11,12 @@ const QrCodeCases = () => {
         className="w-[90%] h-full mx-auto grid grid-cols-2 gap-x-[29px] gap-y-[38px] sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
       >
         {files.map((file) => (
-          <li key={file.source} className="relative">
+          <li key={file.source}>
             <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg">
               <img
                 src={file.source}
-                alt=""
-                className="pointer-events-none object-cover group-hover:opacity-75 max-w-[298px] max-h-[199px]"
+                alt={file.source}
+                className="pointer-events-none object-cover max-w-[298px] max-h-[199px]"
               />
             </div>
             <p className="text-lg leading-7 text-center mt-4">{file.title}</p>

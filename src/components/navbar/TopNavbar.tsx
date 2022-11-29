@@ -7,6 +7,9 @@ import { menuItems, staticNavbarLinks } from "../../helpers/utils/constants";
 import { Link } from "react-router-dom";
 
 const TopNavbar = () => {
+  const handleChangePath = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <Disclosure
       as="nav"
@@ -18,16 +21,20 @@ const TopNavbar = () => {
             <div className="flex h-16 justify-between">
               <div className="flex w-[87%] xl:w-[79%] justify-between">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-[42px] w-[173px] lg:hidden"
-                    src={Logo}
-                    alt="Yalla"
-                  />
-                  <img
-                    className="hidden h-[42px] w-[173px] lg:block"
-                    src={Logo}
-                    alt="Yalla"
-                  />
+                  <div onClick={handleChangePath}>
+                    <img
+                      className="block h-[42px] w-[173px] lg:hidden"
+                      src={Logo}
+                      alt="Yalla"
+                    />
+                  </div>
+                  <div onClick={handleChangePath}>
+                    <img
+                      className="hidden h-[42px] w-[173px] lg:block"
+                      src={Logo}
+                      alt="Yalla"
+                    />
+                  </div>
                 </div>
                 <div className="hidden w-[74%] items-center justify-between lg:flex xl:w-[72%]">
                   {staticNavbarLinks.map((elem, idx) => {
@@ -45,7 +52,8 @@ const TopNavbar = () => {
                         <Link
                           key={idx}
                           to={elem.path}
-                          className="inline-flex items-center hover:border-b-2 hover:border-grey px-1 pt-1 text-black text-lg font-normal leading-[27px]"
+                          onClick={handleChangePath}
+                          className="inline-flex items-center px-1 pt-1 hover:border-light-grey border-b-transparent border-b-2 text-black text-lg font-normal leading-[27px]"
                         >
                           {elem.title}
                         </Link>

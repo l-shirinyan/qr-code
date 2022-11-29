@@ -15,6 +15,7 @@ const RootRouter = () => {
       ],
     },
   ]);
+
   return <RouterProvider router={routes} />;
 };
 export default RootRouter;

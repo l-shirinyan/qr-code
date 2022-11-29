@@ -11,10 +11,10 @@ import Fast from "../../assets/images/fast-time.png";
 import Flexable from "../../assets/images/sugar-cube.png";
 import Safe from "../../assets/images/shield.png";
 import Compliant from "../../assets/images/gdpr.png";
-import AddImage from "../../assets/images/add-image.png";
-import BarChart from "../../assets/images/bar-chart.png";
-import QrCode from "../../assets/images/qr-code.png";
-import Hourglass from "../../assets/images/hourglass.png";
+import { ReactComponent as Gallery } from "../../assets/icons/add-image.svg";
+import { ReactComponent as Chart } from "../../assets/icons/bar-chart 1.svg";
+import { ReactComponent as QrCode } from "../../assets/icons/qr-code.svg";
+import { ReactComponent as Hourglass } from "../../assets/icons/hourglass.svg";
 interface ILinks {
   title: string;
   path: string;
@@ -35,7 +35,8 @@ export interface IMenuItems {
 interface ISolutions {
   name: string;
   description: string;
-  src: string;
+  src?: string;
+  Icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
 }
 
 export const staticNavbarLinks: ILinks[] = [
@@ -228,25 +229,25 @@ export const posts: ISolutions[] = [
     name: "Add your image or logo",
     description:
       "To get more scans with every QR code you generate, you can upload an image or logo using the Free-QR-Code-Generator and customize your QR code design. Branded QR codes get up to 40% more scans than traditional black and white QR codes. As a way for people to trust your QR code more, adding a logo to it is a necessity for brands.",
-    src: AddImage,
+    Icon: Gallery,
   },
   {
     name: "Track instant Data",
     description:
       "Data is an important part of your business operations, without it you will lose many opportunities for your enterprise endeavors. With dynamic QR codes you can always track important scanning information and adjust all your campaigns instantly by updating its content. You can track data as time of scan, number of scan, location and device type (iPhone/ android).",
-    src: BarChart,
+    Icon: Chart,
   },
   {
     name: "Dynamic QR codes",
     description:
       "If you use QR codes to expand your marketing scope, then the use of Dynamic QR codes is the best QR code type that you can apply! With it, you can instantly change the URL or content behind your QR code without needing to create a new set of codes. Thus, making it a great investment that saves you money and time on printing. Many brands already use dynamic QR codes for A/B marketing and to update their marketing campaigns when they need.",
-    src: QrCode,
+    Icon: QrCode,
   },
   {
     name: "Lifetime valid QR codes",
     description:
       "Some say nothing lasts forever! But if you create your static QR code using our QR code generator, your QR codes will be valid forever; your QR never will expire and can be used for a lifetime for your brand. All dynamic QR codes come with a paid subscription as you can update your QR codes at any time and can track data with them!",
-    src: Hourglass,
+    Icon: Hourglass,
   },
 ];
 
