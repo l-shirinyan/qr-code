@@ -31,7 +31,12 @@ const QrGenerator = () => {
 
   const handleGenerateQR = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    mutate.mutate(qrValue);
+    if (!qrValue) {
+      setErr("Required Field");
+    } else {
+      setErr("");
+      mutate.mutate(qrValue);
+    }
   };
 
   return (
@@ -51,18 +56,14 @@ const QrGenerator = () => {
             type="text"
             name="url"
             id="url"
-            required
             value={qrValue}
             onChange={(e) => setQrValue(e.target.value)}
             className="block h-[58px] w-full rounded-[10px] border-[1px] placeholder:text-grey placeholder:text-base outline-none pl-7 text-sm max-w-[474px]"
             placeholder="Example: http://www.yourwebsite.com"
           />
-          <span className="text-red text-sm leading-[21px]">
-            Required Field
-          </span>
+          <span className="text-red text-sm leading-[21px]">{err}</span>
         </div>
         <div className="flex items-center flex-col gap-5 w-full">
-          <span className="text-base text-red leading-5">{err}</span>
           <button
             type="submit"
             className="flex items-center justify-center w-full max-w-[220px] h-[58px] rounded-[10px] bg-light-yellow font-semibold text-[20px] text-white leading-[30px]"

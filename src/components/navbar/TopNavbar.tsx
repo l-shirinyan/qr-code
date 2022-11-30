@@ -74,9 +74,12 @@ const TopNavbar = () => {
                 </Disclosure.Button>
               </div>
               <div className="hidden lg:flex lg:items-center">
-                <button className="w-[100px] xl:w-[122px] h-[31px] bg-purple text-base text-white rounded-[15px]">
+                <Link
+                  to={"/login"}
+                  className="flex items-center justify-center w-[100px] xl:w-[122px] h-[31px] bg-purple text-base text-white rounded-[15px]"
+                >
                   LOGIN
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -119,7 +122,7 @@ const TopNavbar = () => {
               <div className="mt-3 space-y-1">
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/login"
                   className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                 >
                   LOGIN
