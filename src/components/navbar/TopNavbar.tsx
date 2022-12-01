@@ -75,7 +75,7 @@ const TopNavbar = () => {
               </div>
               <div className="hidden lg:flex lg:items-center">
                 <Link
-                  to={"/login"}
+                  to={"/"}
                   className="flex items-center justify-center w-[100px] xl:w-[122px] h-[31px] bg-purple text-base text-white rounded-[15px]"
                 >
                   LOGIN
@@ -122,7 +122,7 @@ const TopNavbar = () => {
               <div className="mt-3 space-y-1">
                 <Disclosure.Button
                   as="a"
-                  href="/login"
+                  href="/"
                   className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                 >
                   LOGIN
