@@ -7,6 +7,7 @@ export const fetchPost = async (url: string) => {
   });
 };
 
+
 export default function usePost(url: string) {
   return useQuery({
     queryKey: ["repoData"],
